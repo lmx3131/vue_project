@@ -1,7 +1,7 @@
 <template>
   <div  class="app-container">
     <!-- 顶部 Header 区域 -->
-    <mt-header fixed title="固定在顶部"></mt-header>
+    <mt-header fixed :title="str"></mt-header>
     <!-- /顶部 Header 区域 -->
     <!-- 中间 路由 router-view 区域 -->
     <router-view></router-view>
@@ -35,7 +35,28 @@
 <script>
 // import { Toast } from "mint-ui"
 // Toast("提示信息");
-export default {};
+export default {
+    data() {
+        return {
+            str:'首页'
+        }
+    },
+    watch: {
+        '$route.path'(to, from) {
+            // console.log(to);
+            if (to === '/home'){
+                this.str = '首页'
+            } else if (to === '/member') {
+                this.str = '会员'
+            } else if (to === '/shopcar') {
+                this.str = '购物车'
+            } else if (to === '/search') {
+                this.str = '搜索'
+            }
+            
+        }
+    },
+};
 </script>
 
 <style lang="scss" scoped>
