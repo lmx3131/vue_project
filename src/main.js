@@ -8,6 +8,7 @@ import App from './App.vue'
 
 // 导入mui框架
 import './lib/mui/css/mui.css'
+import './lib/mui/css/icons-extra.css'
 
 Vue.component(Button.name, Button)
 Vue.component(Cell.name, Cell)
