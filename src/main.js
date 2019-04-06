@@ -10,6 +10,11 @@ import App from './App.vue'
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
 
+// 配置路由
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+import router from './router.js'
+
 Vue.component(Button.name, Button)
 Vue.component(Cell.name, Cell)
 Vue.component(Header.name, Header)
@@ -21,5 +26,6 @@ Vue.component(Header.name, Header)
 
 const vm = new Vue({
     el: '#app',
-    render: h => h(App)
+    render: h => h(App),
+    router
 })
