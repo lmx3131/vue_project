@@ -1,7 +1,13 @@
 import Vue from 'vue'
 
 // 按需导入部分组件
-import { Button, Cell, Header } from "mint-ui"
+import { Button, Cell, Header, Swipe, SwipeItem } from "mint-ui"
+
+Vue.component(Button.name, Button)
+Vue.component(Cell.name, Cell)
+Vue.component(Header.name, Header)
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name, SwipeItem);
 
 
 import App from './App.vue'
@@ -15,9 +21,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 import router from './router.js'
 
-Vue.component(Button.name, Button)
-Vue.component(Cell.name, Cell)
-Vue.component(Header.name, Header)
+// 导入vue-
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+
 // 全局引入mint-ui(这个不好我们最好按需导入)
 // import Mint from 'mint-ui';
 // import 'mint-ui/lib/style.css'

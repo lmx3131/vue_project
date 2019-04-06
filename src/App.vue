@@ -4,7 +4,7 @@
     <mt-header fixed title="固定在顶部"></mt-header>
     <!-- /顶部 Header 区域 -->
     <!-- 中间 路由 router-view 区域 -->
-    <h3>主体部分</h3>
+    <router-view></router-view>
     <!-- /中间 路由 router-view 区域 -->
     <!-- 底部 tab-bar 区域 -->
     <nav class="mui-bar mui-bar-tab">
